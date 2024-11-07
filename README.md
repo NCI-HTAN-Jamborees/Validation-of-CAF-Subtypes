@@ -1,5 +1,9 @@
 # Validation-of-CAF-Subtypes
-
+##
+<b>Team Leader</b>: Jenny Chien <br>
+<b>Tech Leader</b>: Canping Chen <br>
+<b>Writer</b>: Alex Xu <br>
+<b>Team</b>: Alice Browne, Brian Mott, Filippo Pederzoli, Jing Zhu, Nathan Wong
 ## What are CAFs
 Cancer-associated fibroblasts are a diverse set of stromal cells populating the tumor microenvironment (TME), easily recognized by a spindle-like nuclear and membrane structure.
 <br>
@@ -26,13 +30,15 @@ INSERT CODE BLOCKS AND QUALITY METRICS
 <br>
 Next we apply sample preprocessing to spatial omic modalities to prepare for subtyping.
 <br>
+<b>Input formats: scRNAseq, snRNAseq, SlideSeq, MERFISH, CODEX, MIBI
+</b>
+<br>
 ![Strategy to address objectives](/Pipeline.png)
 <br>
 The primary constraint is the information depth and resolution of the spatial omic input data. We apply our strategy first to the data of Klughammer et al, a recent multi-omic study of breast cancer.
 <br>
 ![Multi-omic modalities used in Klughammer et al.](/NMmodalitiessub.png)
 <br>
-
 ### Oversampled Input Data
 Sequencing-based spatial omics generates low density, high coverage molecular profiles that often lack true single cell resolution. We used RCTD to approximate single CAF data points and applied the CAF subtyping model.
 
@@ -61,11 +67,23 @@ H&E: 2 color, baso/acidophilic staining
 <br>
 We developed a conceptual pipeline for pipeline harmonization, where reference data and sample data must align.
 1. Reference data depth
-  - full scRNA CAF subtype
+  - Full scRNA CAF subtype
   - CAF subtype DEGs
   - CAF subtype protein
-2. 
-
+2. Target data format
+  - Spatial or single cell
+  - RNA or protein
+3. Target data depth
+  - Full transcriptome
+  - Probe set
+  - Targeted proteins
+<br>
+Tools for bridging spatial and single cell: RCTD, STdeconvolve
+<br>
+Tools for bridging full transcriptome to targeted probes:
+1. Exact match
+2. Shared pathways
+3. Functional annotated relationships
 ## Remaining challenges
 Generalizability of CAF reference data: Are 9 CAF subtypes specific to breast cancer?
 True multi-omic vs. adjacent slides: Can we expect alignment between slides, to validate CAF subtyping between modalities in the "same" tissue?
