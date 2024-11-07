@@ -2,11 +2,19 @@
 
 ## What are CAFs
 Cancer-associated fibroblasts are a diverse set of stromal cells populating the tumor microenvironment (TME), easily recognized by a spindle-like nuclear and membrane structure.
+<br>
+<p align="center">
 ![Fibroblasts in tumor tissue](/FibroblastSample.png)
-They are widely responsible for shaping the extracellular matrix and the physico-chemical properties of the tumor, and executing pro- and anti-tumor functions by secreting proteases, cytokines, and growth factors that promote tumor growth, suppress immunity, and much more. CAFs receive a fraction of the attention given to immune cells, where heterogeneity is resolved by lymphoid/myeloid lineage and further by immune cell subtypes and exhaustion state. In contrast, CAFs have been defined as a monolith, expressing markers such as alpha-SMA or vimentin. More recently, CAF heterogeneity with clinical significance has been discovered via signaling such as podoplanin linked to poor outcomes. In 2023, deep single cell sequencing of fibroblast populations defined a 
+</p>
+<br>
+They are widely responsible for shaping the extracellular matrix and the physico-chemical properties of the tumor, and executing pro- and anti-tumor functions by secreting proteases, cytokines, and growth factors that promote tumor growth, suppress immunity, and much more. CAFs receive a fraction of the attention given to immune cells, where heterogeneity is resolved by lymphoid/myeloid lineage and further by immune cell subtypes and exhaustion state. In contrast, CAFs have been defined as a monolith, expressing markers such as alpha-SMA or vimentin. More recently, CAF heterogeneity of clinical significance has been discovered, via signaling such as podoplanin linked to poor outcomes. In 2023, deep single cell sequencing of fibroblast populations defined across 9 subtypes, including matrix CAFs, inflammatory CAFs, vascular CAFs, and others.
+<br>
+![CAF subtypes](/CAFTypes.png)
+<br>
+
 
 ### References
-[CAF Subtypes](https://www.nature.com/articles/s41591-024-03215-z#Sec2)
+[CAF Subtypes](https://www.nature.com/articles/s41591-024-03215-z#Sec2 = 40x4)
 Training Data
 
 ## Objectives
