@@ -1,5 +1,4 @@
 # Validation-of-CAF-Subtypes
-##
 <b>Team Leader</b>: Jenny Chien <br>
 <b>Tech Leader</b>: Canping Chen <br>
 <b>Writer</b>: Alex Xu <br>
@@ -25,6 +24,9 @@ If successful, users will be able to:
 5. Apply CAF subtyping in other spatial assays
 
 ## Strategy
+### Requirements
+
+### Preparation
 To achieve our goal of generalized CAF subphenotyping of spatial omics data, we first generate a subtyping model with CellTypist using 10-fold validation of the CAF scRNAseq reference data set from Cords 2023.
 INSERT CODE BLOCKS AND QUALITY METRICS
 <br>
@@ -32,6 +34,8 @@ Next we apply sample preprocessing to spatial omic modalities to prepare for sub
 <br>
 <b>Input formats: scRNAseq, snRNAseq, SlideSeq, MERFISH, CODEX, MIBI
 </b>
+<br>
+Data input/output can be performed packages like XYZ.
 <br>
 ![Strategy to address objectives](/Pipeline.png)
 <br>
@@ -53,7 +57,7 @@ Validation is performed by projecting CAF subtyping results against correspondin
 OVERLAY CAF RESULTS ONTO H&E
 
 ### Understampled Input Data
-Probe-based spatial omics use sparse probe sets that rarely coincide with markers of CAF subtypes. Preprocessing results in relatively well-defined cells via segmentation, but projecting CAF phenotypes onto the dataset can be challenging.
+Probe-based spatial omics use sparse probe sets that rarely coincide with markers of CAF subtypes. Preprocessing results in relatively well-defined cells via segmentation, but projecting CAF phenotypes onto the dataset may require a bespoke process depending on format.
 <br>
 We attempted to preprocess MERFISH, CODEX, and H&E images to correlate with transcriptomically-defined CAF subtypes.
 <br>
@@ -62,8 +66,6 @@ MERFISH: ~300 genes, focused on tumor and immune genes of interest (10 gene fina
 CODEX: 50 proteins, focused on tumor and immune markers (3 gene final overlap with CAF subtype DEG XXXXX)
 <br>
 H&E: 2 color, baso/acidophilic staining
-<br>
-![Panel harmonization between sample MERFISH+CODEX](/PanelHarmony.png)
 <br>
 We developed a conceptual pipeline for pipeline harmonization, where reference data and sample data must align.
 1. Reference data depth
@@ -78,23 +80,31 @@ We developed a conceptual pipeline for pipeline harmonization, where reference d
   - Probe set
   - Targeted proteins
 <br>
+![Panel harmonization between sample MERFISH+CODEX](/PanelHarmony.png)
+<br>
 Tools for bridging spatial and single cell: RCTD, STdeconvolve
 <br>
 Tools for bridging full transcriptome to targeted probes:
 1. Exact match
 2. Shared pathways
 3. Functional annotated relationships
-## Remaining challenges
-Generalizability of CAF reference data: Are 9 CAF subtypes specific to breast cancer?
-True multi-omic vs. adjacent slides: Can we expect alignment between slides, to validate CAF subtyping between modalities in the "same" tissue?
-Scope of CAF subtyping: Can we subtype at broad and coarse scales simultaneously, or do we need to identify fibroblasts first before subtyping separately?
+### Existing Issues
+- For understampled data, confidence in assigned CAF subtypes is very low
+- CAF subtypes are not morphologically distinct and cannot be distinguished by most protein panels, so cannot be validated with non-RNA data
+- Rare cell types are lost during harmonization steps, and low cell numbers can result in math and processing errors
+## Next Steps
+Generalizability of CAF reference data: Are 9 CAF subtypes specific to breast cancer or are they identifiable in other tissues?<br>
+True multi-omic vs. adjacent slides: Can we expect alignment between slides, to validate CAF subtyping between modalities in the "same" tissue?<br>
+Scope of CAF subtyping: Can we subtype at broad and coarse scales simultaneously, or do we need to identify fibroblasts first before subtyping separately?<br>
 
 ### References
 [CAF Subtypes](https://www.nature.com/articles/s41467-023-39762-1)
 [Training Data](https://www.nature.com/articles/s41591-024-03215-z)
 
 
-
+Point out which data to use
+Add text bullet workflow
+Which tools used
 INCLUDE STEPS AND WHICH DATA WAS USED STEP BY STEP
 LIST TEAM MEMBERS
 EXPLAIN RESULTS OF OUTPUTS, WHERE IT CAME FROM, BE EXPLICIT
