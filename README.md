@@ -13,7 +13,7 @@ They are widely responsible for shaping the extracellular matrix and the physico
 We hypothesize that mapping CAF heterogeneity onto single cell and spatial omics data will better resolve patient and sample heterogeneity stemming from CAFs. Further, by defining CAF subtypes, we can propose distinctive markers of CAF subtypes and propagate CAF subtypes to other forms of spatial data that lack the molecular resolution of scRNAseq, allowing CAF subtypes to be defined in datasets such as spatial protein (e.g. IMC, CODEX, etc) and probe-based spatial RNA (e.g. MERFISH, CosMx) assays.
 
 
-## Objectiveimageshttps://cellxgene.cziscience.com/collections/bd552f76-1f1b-43a3-b9ee-0aace57e90d6s
+## Objective
 We will develop computational methods to annotate CAF subtypes across a range of spatial omic assays available in HTAN.
 If successful, users will be able to:
 1. Train and validate a prediction model to identify CAF subtypes
@@ -37,6 +37,8 @@ If successful, users will be able to:
 [CAF Subtype](https://zenodo.org/records/7540604)
 <br>
 [HTAN Multi-omic](https://data.humantumoratlas.org/publications/hta1_2024_pdf_johanna-klughammer)
+<br>
+[HTAN Multi-omic CellxGene](https://cellxgene.cziscience.com/collections/bd552f76-1f1b-43a3-b9ee-0aace57e90d6s)
 ### Pipeline :boom:INCLUDING PACKAGE NAMES AND SPECIFIC PIPELINES/TECHNIQUES USED
 1. CellTypist: create model using CAF subtype reference data
    -. Use CAF reference data
