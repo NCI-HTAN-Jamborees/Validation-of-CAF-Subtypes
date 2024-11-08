@@ -24,6 +24,9 @@ If successful, users will be able to:
 6. Confirm the location of CAF subtypes by comparing to imaging data
 ### Requirements
 :boom:INSERT PACKAGES AND VERSION NUMBERS HERE
+- Python
+  - scanpy - 1.10.1
+  - anndata - 0.10.7
 - R
   - Seurat - 5.0.2
   - anndata - 0.7.5.6
@@ -124,7 +127,7 @@ We used the DEG table (Supplementary Table 3, CAF reference) and selected genes 
 <br>
 ![Panel harmonization between sample MERFISH+CODEX](/images/PanelHarmony.png)
 <br>
-We projected MERFISH CAF subtype scores onto H&E images, finding concordance with SlideSeq spatial projections. * - denotes genes used in the MERFISH gene signature.
+We projected MERFISH CAF subtype scores onto H&E images usimg `htan_jamboree_merfish_binned.ipynb` or `merfish_not_binned.ipynb`, finding concordance with SlideSeq spatial projections. * - denotes genes used in the MERFISH gene signature.
 <br>
 :boom: ADD IMAGES OF H&E AND MERFISH PROJECTIONS
 
