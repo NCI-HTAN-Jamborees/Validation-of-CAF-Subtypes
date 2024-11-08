@@ -65,9 +65,6 @@ The model differentiates CAFs, with example gene signatures below.
 Application of the classifier to scRNAseq data showed no tissue-specific CAF subtype preference and an increase in expected antigen-presenting CAFs.
 ![CAF Subtyping results for scRNAseq datasets](/images/scRNAseqCAFsubtypes.png)
 <br>
-We selected 
-:boom:INSERT QUALITY METRICS, CONFIDENCE VS #GENES USED
-<br>
 Next we apply sample preprocessing to spatial omic modalities to prepare for subtyping.
 <br>
 <b>Input formats: scRNAseq, snRNAseq, SlideSeq, MERFISH, CODEX, MIBI
@@ -81,13 +78,6 @@ The primary constraint is the information depth and resolution of the spatial om
 <br>
 ### Oversampled Input Data
 Sequencing-based spatial omics generates low density, high coverage molecular profiles that often lack true single cell resolution. We used RCTD to approximate single CAF data points and applied the CAF subtyping model.
-#### scRNAseq Validation
-:boom:INSERT CODE BLOCKS FOR BASIC VALIDAtION OF SCRNASEQ CAF SUB TYPING
-<br>
-We find that CAF subtype proportions in Klughammer data match reference proportions. INSERT PLOT
-<br>
-:boom:We also find tissue type dependence???? INSERT PLOT
-<br>
 #### SlideSeq Test
 :boom:INSERT CODE BLOCKS AND QUALITY METRICS
 In this preliminary dataset, we find STUFF.
