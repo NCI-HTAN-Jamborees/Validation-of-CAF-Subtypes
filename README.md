@@ -39,7 +39,8 @@ If successful, users will be able to:
 [HTAN Multi-omic](https://data.humantumoratlas.org/publications/hta1_2024_pdf_johanna-klughammer)
 <br>
 [HTAN Multi-omic CellxGene](https://cellxgene.cziscience.com/collections/bd552f76-1f1b-43a3-b9ee-0aace57e90d6s)
-### Pipeline :boom:INCLUDING PACKAGE NAMES AND SPECIFIC PIPELINES/TECHNIQUES USED
+### Pipeline 
+:boom:INCLUDING PACKAGE NAMES AND SPECIFIC PIPELINES/TECHNIQUES USED
 1. CellTypist: create model using CAF subtype reference data
    - Use CAF reference data
 3. sklearn: train model via 10-fold validation
@@ -51,7 +52,9 @@ If successful, users will be able to:
 5. Classify CAF subtypes using scripts
 6. Xena viewer: validate CAF subtyping via multi-omics
 <br>
+
 ![Strategy to address objectives](/images/Pipeline.png)
+
 ## Strategy
 ### Preparation
 To achieve our goal of generalized CAF subphenotyping of spatial omics data, we first generate a subtyping model with CellTypist using 10-fold validation of the CAF scRNAseq reference data set from Cords 2023, using `SCRIPT`.
@@ -79,15 +82,15 @@ The primary constraint is the information depth and resolution of the spatial om
 ### Oversampled Input Data
 Sequencing-based spatial omics generates low density, high coverage molecular profiles that often lack true single cell resolution. We used RCTD to approximate single CAF data points and applied the CAF subtyping model.
 #### SlideSeq Test
-:boom:INSERT CODE BLOCKS AND QUALITY METRICS
-In this preliminary dataset, we find STUFF.
-:boom:Show results of CAF subtyping (table, bar plot)
-SHOW RESULTS PROJECtED ONTO SPATIAL COORDINATES
+CAF subtyping of SlideSeq data  :boom:Show results of CAF subtyping (table, bar plot)
+:boom:SHOW RESULTS PROJECtED ONTO SPATIAL COORDINATES
 <br>
-Validation is performed by projecting CAF subtyping results against corresponding H&E, and quantifying patient- and tissue-specific CAF proportions.
+Using `VisualizeCAFSubtypes.R`, the spatial location of CAF subtypes can be visualized.
+![Location of Slideseq CAF subtypes](/images/SlideSeqSubtyping6760.png)
 <br>
-Use `VisualizeCAFSubtypes.R`
-:boom:OVERLAY CAF RESULTS ONTO H&E
+Validation is performed by projecting CAF subtyping results against corresponding H&E, visualized in Xena Browser.
+![SlideSeq Xena Browser view](/images/XenaViewer.png)
+<br>
 #### Existing Issues
 - :boom: WHERE DID WE GET STUCK? SMALL THINGS GO HERE, BIG PICTURE STUFF GOES IN THE FUTURE DIRECTIONS SECTION BELOW
 - Rare cell types are lost during harmonization steps, and low cell numbers can result in math and processing errors
@@ -125,13 +128,14 @@ Tools for bridging full transcriptome to targeted probes:
 3. Functional annotated relationships
    
 #### MERFISH Test
-We used the DEG table (Supplementary Table 3, CAF reference) and selected genes with :boom: adjusted-p<XXXX for a single CAF subtype, which we defined as as the gene signature for that subtype. Subtype signature scores were calculated as the mean expression of all genes in the signature.
+We used the DEG table (Supplementary Table 3, CAF reference) to detect overlapping genes between the MERFISH panel and define MERFISH-specific CAF subtype signatures. Subtype signature scores were calculated as the mean expression of all genes in the signature for each cell.
 <br>
 ![Panel harmonization between sample MERFISH+CODEX](/images/PanelHarmony.png)
 <br>
 We projected MERFISH CAF subtype scores onto H&E images usimg `htan_jamboree_merfish_binned.ipynb` or `merfish_not_binned.ipynb`, finding concordance with SlideSeq spatial projections. * - denotes genes used in the MERFISH gene signature.
 <br>
-:boom: ADD IMAGES OF H&E AND MERFISH PROJECTIONS
+![MERFISH scored CAFs projected onto H&E](/images/MERFISHSubtyping6760.png)
+<br>
 
 #### CODEX Test
 Only 3 overlapping gene/protein pairs were found with CAF subtypes and the provided leiden clusters were poor, CAFs could not be easily identified.
