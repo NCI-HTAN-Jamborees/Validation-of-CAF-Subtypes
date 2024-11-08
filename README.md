@@ -41,22 +41,32 @@ If successful, users will be able to:
 [HTAN Multi-omic CellxGene](https://cellxgene.cziscience.com/collections/bd552f76-1f1b-43a3-b9ee-0aace57e90d6s)
 ### Pipeline :boom:INCLUDING PACKAGE NAMES AND SPECIFIC PIPELINES/TECHNIQUES USED
 1. CellTypist: create model using CAF subtype reference data
-   -. Use CAF reference data
+   - Use CAF reference data
 3. sklearn: train model via 10-fold validation
 4. Preprocess data
    - Use multi-omic data
    - RCTD: attribute spatial data to CAF type
    - :boom:WHAT ARE ALL THE PACKAGES WE USED AND WHEN
-   -
+   - Identify CAF signatures in custom spatial probe data
+5. Classify CAF subtypes using scripts
 6. Xena viewer: validate CAF subtyping via multi-omics
 <br>
-
 ![Strategy to address objectives](/images/Pipeline.png)
 ## Strategy
 ### Preparation
-To achieve our goal of generalized CAF subphenotyping of spatial omics data, we first generate a subtyping model with CellTypist using 10-fold validation of the CAF scRNAseq reference data set from Cords 2023.
+To achieve our goal of generalized CAF subphenotyping of spatial omics data, we first generate a subtyping model with CellTypist using 10-fold validation of the CAF scRNAseq reference data set from Cords 2023, using `SCRIPT`.
 <br>
-:boom:INSERT CODE BLOCKS AND QUALITY METRICS, CONFIDENCE VS #GENES USED
+Model performance plateaued at ~1000 genes.
+![Model performance](/images/ModelPerformance.png)
+<br>
+The model differentiates CAFs, with example gene signatures below.
+![DEGs per subtype](/images/classifierDEG.png)
+<br>
+Application of the classifier to scRNAseq data showed no tissue-specific CAF subtype preference and an increase in expected antigen-presenting CAFs.
+![CAF Subtyping results for scRNAseq datasets](/images/scRNAseqCAFsubtypes.png)
+<br>
+We selected 
+:boom:INSERT QUALITY METRICS, CONFIDENCE VS #GENES USED
 <br>
 Next we apply sample preprocessing to spatial omic modalities to prepare for subtyping.
 <br>
