@@ -60,8 +60,6 @@ Next we apply sample preprocessing to spatial omic modalities to prepare for sub
 <br>
 Data input/output can be performed packages like XYZ.
 <br>
-![Strategy to address objectives](images/Pipeline.png)
-<br>
 The primary constraint is the information depth and resolution of the spatial omic input data. We apply our strategy first to the data of Klughammer et al, a recent multi-omic study of breast cancer.
 <br>
 ![Multi-omic modalities used in Klughammer et al.](images/NMmodalitiessub.png)
