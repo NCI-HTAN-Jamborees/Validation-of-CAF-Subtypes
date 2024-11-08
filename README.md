@@ -12,7 +12,8 @@ They are widely responsible for shaping the extracellular matrix and the physico
 <br><br>
 We hypothesize that mapping CAF heterogeneity onto single cell and spatial omics data will better resolve patient and sample heterogeneity stemming from CAFs. Further, by defining CAF subtypes, we can propose distinctive markers of CAF subtypes and propagate CAF subtypes to other forms of spatial data that lack the molecular resolution of scRNAseq, allowing CAF subtypes to be defined in datasets such as spatial protein (e.g. IMC, CODEX, etc) and probe-based spatial RNA (e.g. MERFISH, CosMx) assays.
 
-## Objectives
+
+## Objectiveimageshttps://cellxgene.cziscience.com/collections/bd552f76-1f1b-43a3-b9ee-0aace57e90d6s
 We will develop computational methods to annotate CAF subtypes across a range of spatial omic assays available in HTAN.
 If successful, users will be able to:
 1. Train and validate a prediction model to identify CAF subtypes
@@ -57,11 +58,13 @@ Next we apply sample preprocessing to spatial omic modalities to prepare for sub
 <b>Input formats: scRNAseq, snRNAseq, SlideSeq, MERFISH, CODEX, MIBI
 </b>
 <br>
-Data input/output can be performed packages like :boom:XYZ.
+Data input/output can be performed packages like XYZ.
+<br>
+![Strategy to address objectives](images/Pipeline.png)
 <br>
 The primary constraint is the information depth and resolution of the spatial omic input data. We apply our strategy first to the data of Klughammer et al, a recent multi-omic study of breast cancer.
 <br>
-![Multi-omic modalities used in Klughammer et al.](/images/NMmodalitiessub.png)
+![Multi-omic modalities used in Klughammer et al.](images/NMmodalitiessub.png)
 <br>
 ### Oversampled Input Data
 Sequencing-based spatial omics generates low density, high coverage molecular profiles that often lack true single cell resolution. We used RCTD to approximate single CAF data points and applied the CAF subtyping model.
