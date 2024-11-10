@@ -128,7 +128,7 @@ Tools for bridging full transcriptome to targeted probes:
 3. Functional annotated relationships
    
 #### MERFISH Test
-We used the DEG table (Supplementary Table 3, CAF reference) to detect overlapping genes between the MERFISH panel and define MERFISH-specific CAF subtype signatures. Subtype signature scores were calculated as the mean expression of all genes in the signature for each cell.
+We used the DEG table (Supplementary Table 3, CAF reference) to detect overlapping genes between the MERFISH panel and define MERFISH-specific CAF subtype signatures. Subtype signature scores were calculated as the mean expression of all genes in the signature for each cell `scanpy gene_scores()`.
 <br>
 ![Panel harmonization between sample MERFISH+CODEX](/images/PanelHarmony.png)
 <br>
